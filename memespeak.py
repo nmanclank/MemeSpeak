@@ -13,6 +13,7 @@ intents = discord.Intents.default()
 intents.voice_states = True
 intents.guilds = True
 intents.members = True
+intents.message_content = True
 
 bot = commands.Bot(command_prefix='!', intents=intents)
 
@@ -31,12 +32,12 @@ async def on_voice_state_update(member, before, after):
     if member.bot or before.channel == after.channel:
         return
 
-    restricted_channel_id = 1095538701829939320
-
     if after.channel and after.channel.id == restricted_channel_id:
         return
 
     afk_channel = member.guild.afk_channel
+    
+    #when the a user joins a channel and the current user count of this channel is > 1, the bot will join and play join.mp3
 
     if after.channel and len(after.channel.members) > 1:
         vc = await after.channel.connect()
