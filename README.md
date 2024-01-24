@@ -3,6 +3,10 @@
 # MemeSpeak
 This is a discord bot that reintroduces the beloved TTS from TeamSpeak3. Included, you have Join, Leave, and Moved messages.
 
+## Ask MemeSpeak to Join your server.
+
+[Invite MemeSpeak][(https://discord.com/api/oauth2/authorize?client_id=1094103412771127296&permissions=36701184&scope=bot)].
+
 
 ## Insructions for setup:
 
